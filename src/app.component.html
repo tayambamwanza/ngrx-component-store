@@ -1,0 +1,13 @@
+<div style="display: flex; width: 200px; justify-content: space-evenly">
+  <button (click)="addItem()"> create </button>
+  <button (click)="updateItem()"> update </button>
+  <button (click)="deleteItem()"> delete </button>
+</div>
+
+  <ul style="list-style: none" *ngIf=items()>
+      <li style="margin-bottom: 40px" *ngFor="let item of items()"> 
+        <p> 😃 <b> Person: </b>  {{item.fullName}}  </p>
+        <p> ⏳ <b> Age: </b> {{item.age}}  </p>
+        <p> 🧪 <b> Nerd Status: </b>  {{item.isNerdy}}  </p>
+      </li>
+  </ul>
